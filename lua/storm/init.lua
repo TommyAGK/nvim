@@ -1,6 +1,6 @@
-require("tommy.remap")
-require("tommy.settings")
-
+require("storm.remap")
+require("storm.settings")
+require("storm.packer")
 
 local augroup = vim.api.nvim_create_augroup
 
