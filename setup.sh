@@ -4,7 +4,7 @@ echo "Fetching packer and placing it in your .local/share"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-if [[ $(pacman -Q npm) ]]; then
+if [[ $(npm) ]]; then
 echo "npm present"
 else
     echo "install npm first"
