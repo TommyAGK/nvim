@@ -5,6 +5,11 @@ There are parts collected from various other users, inspired by or simply self-i
 
 I thank every single plugin writer for their efforts, without you. I would not be comfy.
 
+# Install
+* Clone this repo
+* Install npm
+* run install script included in repo
+    * I have not bothered writing a part to install npm for you, cuz i dont know what packet manager you have.
 
 # Hotkey overview!
 Common things
