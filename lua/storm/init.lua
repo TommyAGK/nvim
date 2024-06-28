@@ -1,4 +1,5 @@
-require("storm.packer")
+-- require("storm.packer")
+require("storm.lazy")
 require("storm.remap")
 require("storm.settings")
 
