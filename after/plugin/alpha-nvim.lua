@@ -20,12 +20,21 @@ dashboard.section.buttons.val = {
 	dashboard.button("p", " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
 	dashboard.button("r", " Recent files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", " Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", " Config", ":e ~/.config/nvim/init.lua <CR>"),
-	dashboard.button("u", " Update", ":PackerSync<CR>"),
+	dashboard.button("c", " Config", ":Telescope find_files cwd=~/.config/nvim/ <CR>"),
+	dashboard.button("u", " Update", ":Lazy<CR>"),
 	dashboard.button("q", " Quit", ":qa<CR>"),
 }
+
 local function footer()
-	return "Bråt tu ju bai storm dev"
+	return [[Why problem make, when no problem have, don't want?
+                       -- Tommy]]
+end
+
+local os = vim.loop.os_uname().sysname
+if os == "Windows_NT" then
+	--dashboard.section.buttons.val[6] = dashboard.button("c", " Edit nvim configs", ":e ~/AppData/Local/nvim/ <CR>")
+	dashboard.section.buttons.val[6] =
+		dashboard.button("c", " Edit nvim configs", ":Telescope find_files cwd=~/AppData/Local/nvim/ <CR>")
 end
 
 dashboard.section.footer.val = footer()

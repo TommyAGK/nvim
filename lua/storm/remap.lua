@@ -22,5 +22,5 @@ end)
 
 -- go back to dashboard
 vim.keymap.set("n", "<leader>db", function()
-	vim.cmd("Dashboard")
+	vim.cmd("Alpha")
 end)
