@@ -1,29 +1,30 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open built in file browser" })
 
 -- copy paste
-vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy" })
 
 -- format buffer with lsp
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format file" })
 
 -- map Ctrl-c to esc lol
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Escape!" })
 
 -- make file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Make file executable", silent = true })
 
 -- space space is the same as :so which sources active file
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
-end)
+end, { desc = "Source the file" })
 
 -- go back to dashboard
 vim.keymap.set("n", "<leader>db", function()
 	vim.cmd("Alpha")
-end)
+end, { desc = "Return to dashboard" })
 
 -- move lines around
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })

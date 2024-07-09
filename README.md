@@ -15,6 +15,9 @@ Ensure you got these things installed.
 * Install pip package pynvim 
 * unzip
 * ripgrep
+* cmake
+* luarocks
+
 
 
 # Hotkey overview!
