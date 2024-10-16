@@ -9,7 +9,7 @@ I thank every single plugin writer for their efforts, without you. I would not b
 * Clone this repo
 
 Ensure you got these things installed.
-Arch : `sudo pacman -Sy --needed python-pynvim unzip ripgrep cmake luarocks npm; npm install -g neovim`
+* Arch : `sudo pacman -Sy --needed python-pynvim unzip ripgrep cmake luarocks npm; npm install -g neovim`
 
 Everyone else:
 * Install npm
