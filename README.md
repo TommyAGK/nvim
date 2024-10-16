@@ -9,6 +9,9 @@ I thank every single plugin writer for their efforts, without you. I would not b
 * Clone this repo
 
 Ensure you got these things installed.
+Arch : `sudo pacman -Sy --needed python-pynvim unzip ripgrep cmake luarocks npm; npm install -g neovim`
+
+Everyone else:
 * Install npm
     * Install neovim npm package using the -g flag `npm install -g neovim´
 * python3 and pip
@@ -21,7 +24,6 @@ Ensure you got these things installed.
 
 ----------KEYBINDS ARE KINDA OUT OF DATE--------------
 There is a plugin called which-key, which .... helps with keybinds, refer to that instead
-
 
 
 # Hotkey overview!
