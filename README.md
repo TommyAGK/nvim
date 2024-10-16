@@ -17,6 +17,10 @@ Ensure you got these things installed.
 * ripgrep
 * cmake
 * luarocks
+* any font from nerdfonts, i recommend hack, just get one with all symbols from em.
+
+----------KEYBINDS ARE KINDA OUT OF DATE--------------
+There is a plugin called which-key, which .... helps with keybinds, refer to that instead
 
 
 
