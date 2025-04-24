@@ -1,25 +1,11 @@
 local wk = require("which-key")
 local ts = require("telescope.builtin")
+local tr = require("nvim-tree.api")
 
 -- which-key defaults to normal mode
-
--- telescope parts
--- wk.register({
--- 	["<leader>p"] = {
--- 		name = "telescope file browser",
--- 		f = { ts.find_files, "find files" },
--- 		g = { ts.git_files, "find files in git repo" },
--- 		s = {
--- 			function()
--- 				ts.grep_string({ search = vim.fn.input("find word greplike > ") })
--- 			end,
--- 			"Search for text",
--- 		},
--- 	},
--- })
-
 wk.add({
     { "<leader>p",  group = "Telescope file browser" },
+    { "<leader>b",  ts.buffers,                      desc = "Telescope buffers" },
     { "<leader>pf", ts.find_files,                   desc = "Find files" },
     { "<leader>pg", ts.git_files,                    desc = "Find files in git repo" },
     {
@@ -48,43 +34,6 @@ wk.add({
     { "<C-S>P", desc = "Previous buffer in harpoon" },
 })
 
---wk.register({
---    ["<C>"] = {
---        name = "Harpoon stuff",
---        e = {
---            "view harpoon list",
---        },
---        h = {
---            "view harpoon list",
---        },
---        t = {
---            "view harpoon list",
---        },
---        n = {
---            "view harpoon list",
---        },
---        s = {
---            "view harpoon list",
---        },
---    },
---})
--- wk.register({
---     ["<C-S>"] = {
---         P = {
---             "Previous buffer in harpoon",
---         },
---         N = {
---             "Next buffer in harpoon",
---         },
---     },
--- })
-
--- ssh stuff
---wk.register({
---    ["<leader>rf"] = {
---        f = { "Remote file actions" },
---    },
---})
 
 wk.add({
     { "<leader>rff", desc = "Remote file actions" },
@@ -95,9 +44,6 @@ wk.add({
     { "K", desc = "Get info on element" },
 })
 
---wk.register({
---    ["K"] = { "Get info on element" },
---})
 
 -- generic leader namings
 wk.add({
@@ -108,13 +54,11 @@ wk.add({
     { "<leader>r", desc = "Remote Host" },
     { "<leader>z", desc = "LSP" },
 })
--- wk.register({
---     ["<leader>"] = {
---         a = { "Add file to harpoon jump list" },
---         r = { "Remote host" },
---         g = { "Git" },
---         d = { "Dashboard" },
---         Z = { "Zen" },
---         z = { "LSP" },
---     },
--- })
+
+wk.add({
+    { "<leader>e", vim.cmd.NvimTreeToggle, desc = "toggle nvim tree" },
+})
+
+wk.add({
+    { "<leader>rf", desc = "remote file actions" },
+})
