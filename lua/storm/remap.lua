@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open built in file browser" })
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open built in file browser" })
 
 -- copy paste
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste" })
+--vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste" })
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy" })
 
@@ -28,8 +28,8 @@ end, { desc = "Return to dashboard" })
 
 -- move lines around
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
 vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
 vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
