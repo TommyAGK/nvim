@@ -43,7 +43,16 @@ wk.add({
 -- LSP stuff
 wk.add({
     --                    lsp_zero.buf.definition()
-    { "K", desc = "Get info on element" },
+    { "gd", desc = "Go to definition" },
+    { "gD", desc = "Go to declaration of element" },
+    { "go", desc = "Go to type defintion" },
+    { "gO", desc = "Display symbols in document" },
+    { "gs", desc = "Display signature help" },
+    { "gr", desc = "Go to references" },
+    { "K",  desc = "Get info on element" },
+    { "F2", desc = "refactor with new name" },
+    { "F3", desc = "Format code, async" },
+    { "F4", desc = "Code actions" },
 })
 
 
