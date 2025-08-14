@@ -1,7 +1,7 @@
 local wk = require("which-key")
 local ts = require("telescope.builtin")
 local tr = require("nvim-tree.api")
-local lsp = require("lsp-zero")
+--local lsp = require("lsp-zero")
 
 -- which-key defaults to normal mode
 wk.add({
@@ -37,8 +37,7 @@ wk.add({
 
 -- LSP stuff
 wk.add({
-	--                    lsp_zero.buf.definition()
-	{ "gd", desc = "Go to definition" },
+	{ "^]", desc = "Go to definition" },
 	{ "gD", desc = "Go to declaration of element" },
 	{ "go", desc = "Go to type defintion" },
 	{ "gO", desc = "Display symbols in document" },
