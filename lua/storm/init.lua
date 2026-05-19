@@ -2,6 +2,7 @@
 require("storm.lazy")
 require("storm.remap")
 require("storm.settings")
+require("storm.lsp")
 
 local augroup = vim.api.nvim_create_augroup
 
